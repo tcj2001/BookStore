@@ -306,7 +306,7 @@ namespace <#= StartupProject #>.Extensions
 using Domain.Exceptions;
 using System.Text.Json;
 
-namespace <#= StartupProject #>.Middleware
+namespace <#= StartupProject #>.Middlewares
 {
     internal sealed class ExceptionHandlingMiddleware : IMiddleware
     {
@@ -384,7 +384,7 @@ namespace <#= StartupProject #>
 using Microsoft.OpenApi.Models;
 using Serilog;
 using <#= StartupProject #>.Extensions;
-using <#= StartupProject #>.Middleware;
+using <#= StartupProject #>.Middlewares;
 
 namespace <#= StartupProject #>
 {
