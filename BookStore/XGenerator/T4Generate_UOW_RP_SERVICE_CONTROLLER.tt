@@ -32,40 +32,6 @@
         efContext = classWithDbContext.Name;
     }
 #>
-/////////////////////////
-// generated Sample.cs //
-/////////////////////////
-using System.ComponentModel.DataAnnotations;
-
-namespace Domain.Entities
-{
-    public class Sample
-    {
-        [Key]
-        public int Id { get; set; }
-        public string? Name { get; set; }
-        public string? Description { get; set; }
-    }
-}
-<# CreateFile("Domain", "Entities","Sample.cs"); #>
-///////////////////////////////////////
-// generated ApplicationDbContext.cs //
-///////////////////////////////////////
-using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
-
-namespace Infrastructure.Persistence.Context
-{
-    public class ApplicationDbContext : DbContext
-    {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
-        {
-
-        }
-        public DbSet<Sample> Samples { get; set; }
-    }
-}
-<# CreateFile("Infrastructure", "Persistence/Context","ApplicationDbContext.cs"); #>
 /////////////////////////////////////
 // generated IGenericRepository.cs //
 /////////////////////////////////////
@@ -348,7 +314,7 @@ namespace <#= StartupProject #>.Middlewares
         }
     }
 }
-<# CreateFile(StartupProject, "Middleware","ExceptionHandlingMiddleware.cs"); #>
+<# CreateFile(StartupProject, "Middlewares","ExceptionHandlingMiddleware.cs"); #>
 //////////////////////////
 // generated Program.cs //
 //////////////////////////
